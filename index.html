@@ -16,14 +16,21 @@
 
 <body style="margin:0; overflow:hidden;">
 
-<a-scene embedded arjs gesture-detector>
+<a-scene
+embedded
+arjs
+gesture-detector
+renderer="logarithmicDepthBuffer: true;"
+vr-mode-ui="enabled: false"
+device-orientation-permission-ui="enabled: false">
 
 <a-marker type="pattern" url="marker.patt">
 
 <a-entity
 gltf-model="model.glb"
 scale="0.5 0.5 0.5"
-gesture-handler>
+rotation="0 0 0"
+gesture-handler="minScale: 0.3; maxScale: 5">
 </a-entity>
 
 </a-marker>
